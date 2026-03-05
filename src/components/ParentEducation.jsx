@@ -21,24 +21,30 @@ function ParentEducation() {
   const trackRef = useRef(null);
   const requestRef = useRef();
   const positionRef = useRef(0);
+  const speedRef = useRef(window.innerWidth < 768 ? 0.65 : 0.6);
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const startXRef = useRef(0);
 
   const extendedImages = [...images, ...images];
 
+  const normalSpeed = window.innerWidth < 768 ? 0.65 : 0.6;
+
   /* CONTINUOUS AUTO FLOW */
   useEffect(() => {
     const track = trackRef.current;
-    const speed =
-      window.innerWidth < 768 ? 0.9 : 0.6; // faster mobile
 
     const animate = () => {
       if (!isDragging) {
-        positionRef.current += speed;
+        positionRef.current += speedRef.current;
 
         if (positionRef.current >= track.scrollWidth / 2) {
           positionRef.current = 0;
+        }
+
+        if (positionRef.current < 0) {
+          positionRef.current = track.scrollWidth / 2;
         }
 
         track.style.transform = `translateX(-${positionRef.current}px)`;
@@ -51,16 +57,21 @@ function ParentEducation() {
     return () => cancelAnimationFrame(requestRef.current);
   }, [isDragging]);
 
-  /* DESKTOP ARROWS */
+  /* DESKTOP ARROWS (SMOOTH BOOST) */
   const moveNext = () => {
-    positionRef.current += 300;
+    speedRef.current = 9;
+
+    setTimeout(() => {
+      speedRef.current = normalSpeed;
+    }, 500);
   };
 
   const movePrev = () => {
-    positionRef.current -= 300;
-    if (positionRef.current < 0) {
-      positionRef.current = trackRef.current.scrollWidth / 2;
-    }
+    speedRef.current = -9;
+
+    setTimeout(() => {
+      speedRef.current = normalSpeed;
+    }, 500);
   };
 
   /* MOBILE SWIPE */
@@ -94,7 +105,6 @@ function ParentEducation() {
 
         <div className="education-wrapper">
 
-          {/* Desktop Arrows */}
           <button className="arrow left" onClick={movePrev}>
             ‹
           </button>

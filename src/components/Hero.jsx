@@ -131,8 +131,10 @@ aspectRatio: "1 / 1",
   }}
   style={{
     position: "absolute",
-    width: "520px",
-    height: "520px",
+    width: "110%",
+    height: "110%",
+    maxWidth: "520px",
+    maxHeight: "520px",
     borderRadius: "50%",
     background:
       "radial-gradient(circle, rgba(194,24,91,0.35) 0%, rgba(194,24,91,0.15) 60%, transparent 70%)",
