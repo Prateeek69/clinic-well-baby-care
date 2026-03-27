@@ -6,6 +6,8 @@ import photo4 from "../assets/photos/photo4.jpg";
 import photo5 from "../assets/photos/photo5.jpg";
 import photo6 from "../assets/photos/photo6.jpg";
 import photo7 from "../assets/photos/photo7.jpg";
+import photo8 from "../assets/photos/photo8.jpg";
+import photo9 from "../assets/photos/photo9.jpg";
 
 const images = [
   photo1,
@@ -15,6 +17,8 @@ const images = [
   photo5,
   photo6,
   photo7,
+  photo8,
+  photo9,
 ];
 
 function ParentEducation() {
