@@ -955,3 +955,19 @@ html {
   from { transform: scale(0.85); }
   to { transform: scale(1); }
 }
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  background: #f3b6c9;
+}
+
+/* icon base */
+.icon {
+  font-size: 18px;
+}
+
+/* brand colors */
+.icon.whatsapp { color: #25D366; }
+.icon.facebook { color: #1877F2; }
+.icon.map { color: #d6336c; }
+.icon.phone { color: #333; }

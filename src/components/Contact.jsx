@@ -1,4 +1,4 @@
-import { MapPin, Phone, MessageCircle } from "lucide-react";
+import { FaWhatsapp, FaFacebookF, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 
 function Contact() {
   const phoneNumber = "7008543572";
@@ -34,40 +34,42 @@ function Contact() {
 
           <div className="contact-actions">
 
-  <a
-    href={directionLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="cta-btn"
-  >
-    <MapPin size={20} stroke="#d6336c" strokeWidth={2} />
-    Get Directions
-  </a>
+            <a
+              href={directionLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn"
+            >
+              <FaMapMarkerAlt className="icon map" />
+              <span>Get Directions</span>
+            </a>
 
-  <a href={callLink} className="cta-btn">
-    <Phone size={20} stroke="#000000" strokeWidth={2} />
-    Call Now
-  </a>
-    <a
-  href="https://www.facebook.com/kaliprasadmishrapaediatric"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="cta-btn"
->
-  <span className="icon">📘</span>
-  Facebook
-</a>
-  <a
-    href={whatsappLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="cta-btn"
-  >
-    <MessageCircle size={20} stroke="#1fa855" strokeWidth={2} />
-    WhatsApp
-  </a>
+            <a href={callLink} className="cta-btn">
+              <FaPhone className="icon phone" />
+              <span>Call Now</span>
+            </a>
 
-</div>
+            <a
+              href="https://www.facebook.com/kaliprasadmishrapaediatric"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn"
+            >
+              <FaFacebookF className="icon facebook" />
+              <span>Facebook</span>
+            </a>
+
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn"
+            >
+              <FaWhatsapp className="icon whatsapp" />
+              <span>WhatsApp</span>
+            </a>
+
+          </div>
 
         </div>
 
