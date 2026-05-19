@@ -6,6 +6,7 @@ import Timings from "./components/Timings";
 import Contact from "./components/Contact";
 import ParentEducation from "./components/ParentEducation";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Timings />
       <Contact />
       <FloatingWhatsapp />
+      <Analytics />
     </>
   );
 }
