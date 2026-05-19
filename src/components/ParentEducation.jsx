@@ -8,17 +8,23 @@ import photo6 from "../assets/photos/photo6.jpg";
 import photo7 from "../assets/photos/photo7.jpg";
 import photo8 from "../assets/photos/photo8.jpg";
 import photo9 from "../assets/photos/photo9.jpg";
+import photo10 from "../assets/photos/photo10.jpg";
+import photo11 from "../assets/photos/photo11.jpg";
+import photo12 from "../assets/photos/photo12.jpg";
 
 const images = [
-  photo1,
-  photo2,
-  photo3,
-  photo4,
-  photo5,
-  photo6,
-  photo7,
-  photo8,
+  photo12,
+  photo11,
+  photo10,
   photo9,
+  photo8,
+  photo7,
+  photo6,
+  photo5,
+  photo4,
+  photo3,
+  photo2,
+  photo1,
 ];
 
 function ParentEducation() {
